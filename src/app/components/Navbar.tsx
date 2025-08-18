@@ -1,14 +1,33 @@
 "use client";
 import { useState } from "react";
 import { Menu, X, ShoppingCart, Search } from "lucide-react";
+import Link from "next/link";
+import { Bebas_Neue, Montserrat } from "next/font/google";
+
+const bebasFont = Bebas_Neue({
+	subsets: ["latin"],
+	weight: "400",
+});
+const montserratBold = Montserrat({
+	subsets: ["latin"],
+	weight: "600",
+});
+
+const navLinks = [
+	{ label: "Home", href: "/" },
+	{ label: "Shop", href: "/shop" },
+	{ label: "Sell", href: "/sell" },
+	{ label: "About", href: "/about" },
+	{ label: "Contact", href: "/contact" },
+];
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<nav className="fixed w-full bg-black text-white py-6 px-8 flex justify-between items-center z-50">
+		<nav className="fixed w-full bg-black text-white py-6 sm:px-16 px-6 flex justify-between items-center z-50">
 			{/* MENU For Mobile and Ting!!!! */}
-			<button className=" sm:hidden" onClick={() => setIsOpen(!isOpen)}>
+			<button className=" md:hidden" onClick={() => setIsOpen(!isOpen)}>
 				{isOpen ? (
 					<X
 						size={24}
@@ -22,27 +41,30 @@ const Navbar = () => {
 				)}
 			</button>
 
-			<div className="text-2xl font-semibold tracking-wider uppercase">
-				Deck ’n’ Deal
+			{/* NEED TO CHANGE FONT!!!! */}
+			<div className="">
+				<Link
+					href="/"
+					className={`text-4xl font-semibold tracking-wide uppercase hover:text-neutral-300 ${bebasFont.className}`}
+				>
+					Skate Trader
+				</Link>
 			</div>
 
 			{/* desktop links !!!!!!! not quite centered !!!!!!!!!!!! */}
-			<ul className="hidden sm:flex gap-6 text-xs uppercase font-bold tracking-wide md:-ml-24">
-				<li className="hover:text-neutral-400 cursor-pointer duration-150">
-					Home
-				</li>
-				<li className="hover:text-neutral-300 cursor-pointer duration-150">
-					Shop
-				</li>
-				<li className="hover:text-neutral-300 cursor-pointer duration-150">
-					Sell
-				</li>
-				<li className="hover:text-neutral-300 cursor-pointer duration-150">
-					About
-				</li>
-				<li className="hover:text-neutral-300 cursor-pointer duration-150">
-					Contact
-				</li>
+			<ul
+				className={`hidden md:flex gap-4 lg:gap-10 text-xs uppercase font-bold md:-ml-20 tracking-wide ${montserratBold.className}`}
+			>
+				{navLinks.map(({ label, href }) => (
+					<li key={label}>
+						<Link
+							href={href}
+							className="hover:text-neutral-300 cursor-pointer duration-150"
+						>
+							{label}
+						</Link>
+					</li>
+				))}
 			</ul>
 
 			{/* Right: Icons */}
@@ -51,19 +73,26 @@ const Navbar = () => {
 				<Search className="w-6 h-6 cursor-pointer hover:text-neutral-300" />
 			</div>
 
-			{isOpen && (
-				<div className="absolute top-full left-0 w-full bg-black text-white flex flex-col items-center md:hidden">
-					{["Home", "Shop", "Sell", "About", "Contact"].map((link) => (
-						<button
-							key={link}
-							className="py-3 w-full text-center cursor-pointer hover:text-neutral-400 duration-200"
-							onClick={() => setIsOpen(false)} // close menu on click
+			{/* mobile nav ---- links need to work */}
+			{/* {isOpen && ( */}
+			<ul
+				className={`absolute top-full left-0 w-full bg-black text-white flex flex-col items-center gap-4 uppercase md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+					isOpen ? "max-h-64 opacity-100 py-4 pb-8" : "max-h-0 opacity-0 py-0"
+				}`}
+			>
+				{navLinks.map(({ label, href }) => (
+					<li key={label}>
+						<Link
+							href={href}
+							className="hover:text-neutral-300 cursor-pointer duration-150"
+							onClick={() => setIsOpen(false)}
 						>
-							{link}
-						</button>
-					))}
-				</div>
-			)}
+							{label}
+						</Link>
+					</li>
+				))}
+			</ul>
+			{/* )} */}
 		</nav>
 	);
 };

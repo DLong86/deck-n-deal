@@ -20,7 +20,7 @@ const Footer = () => {
 	}, []);
 
 	return (
-		<footer className="lg:fixed bottom-0 left-0 w-full bg-black text-white py-6 px-6 lg:px-18 z-50">
+		<footer className="md:fixed bottom-0 left-0 w-full bg-black text-white py-6 px-6 sm:px-16 z-50">
 			<div className="flex justify-between items-center text-sm ">
 				<div className="flex uppercase gap-1 text-xs font-extralight items-center">
 					<a href="#" className="hover:text-neutral-300">
