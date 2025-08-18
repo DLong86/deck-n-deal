@@ -42,5 +42,16 @@ export const products = [
 		description: "No visible stains or damage. It's from S/s23 collection.",
 		category: "tees",
 	},
+	{
+		id: 5,
+		slug: "trucks",
+		name: "Independent ST11 Forged Titanium",
+		price: "¥9000",
+		size: "144HI",
+		imageUrl: "../../images/indy-trucks.jpg",
+		description:
+			"Slight wear from grinding, but no deep grooves etc. Very light truck, and great for flip tricks.",
+		category: "trucks",
+	},
 	// -----------------------------------------
 ];

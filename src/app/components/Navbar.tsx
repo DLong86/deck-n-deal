@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { Menu, X, ShoppingCart, Search } from "lucide-react";
 import Link from "next/link";
-import { Bebas_Neue, Montserrat } from "next/font/google";
+import { Bebas_Neue, Montserrat, Creepster } from "next/font/google";
 
-const bebasFont = Bebas_Neue({
+const bebasFont = Creepster({
 	subsets: ["latin"],
 	weight: "400",
 });
