@@ -8,7 +8,13 @@ export const products = [
 		imageUrl: "../../images/frog-deck.png",
 		description:
 			"Only used twice, no visible dirt or scratches. Still has lots of pop. Selling because I wanted to move down a size.",
-		category: "deck",
+		category: "Decks",
+		condition: "Like New",
+		seller: {
+			name: "Sk8Rat187",
+			profileUrl: "#",
+			rating: 4.5,
+		},
 	},
 	{
 		id: 2,
@@ -19,7 +25,13 @@ export const products = [
 		imageUrl: "../../images/vm003.png",
 		description:
 			"Slight wear on the sole but still fresh. Only been worn 5 to 6 times. Never been skated in.",
-		category: "shoes",
+		category: "Shoes",
+		condition: "Used (Good)",
+		seller: {
+			name: "Nige92",
+			profileUrl: "#",
+			rating: 5,
+		},
 	},
 	{
 		id: 3,
@@ -30,7 +42,13 @@ export const products = [
 		imageUrl: "../../images/spitfire.png",
 		description:
 			"Bit of dirt from usage. Probably around 50 to 51mm now. No flat spots.",
-		category: "wheels",
+		category: "Wheels",
+		condition: "Used (Good)",
+		seller: {
+			name: "Sk8Rat187",
+			profileUrl: "#",
+			rating: 4.5,
+		},
 	},
 	{
 		id: 4,
@@ -40,7 +58,13 @@ export const products = [
 		size: "M",
 		imageUrl: "../../images/t-shirt.png",
 		description: "No visible stains or damage. It's from S/s23 collection.",
-		category: "tees",
+		category: "Tees",
+		condition: "Like New",
+		seller: {
+			name: "Sk8Rat187",
+			profileUrl: "#",
+			rating: 4.5,
+		},
 	},
 	{
 		id: 5,
@@ -51,7 +75,47 @@ export const products = [
 		imageUrl: "../../images/indy-trucks.jpg",
 		description:
 			"Slight wear from grinding, but no deep grooves etc. Very light truck, and great for flip tricks.",
-		category: "trucks",
+		category: "Trucks",
+		condition: "Used (Good)",
+		seller: {
+			name: "sparkplugsteve78",
+			profileUrl: "#",
+			rating: 4,
+		},
+	},
+	{
+		id: 6,
+		slug: "deck-3",
+		name: "Passport deck - used twice",
+		price: "¥8000",
+		size: "8.125",
+		imageUrl: "../../images/passport.jpg",
+		description:
+			"Only been skated once. Have stopped skating so this deck has just been sitting collecting dust.",
+		category: "Decks",
+		condition: "Like New",
+		seller: {
+			name: "Nige92",
+			profileUrl: "#",
+			rating: 5,
+		},
+	},
+	{
+		id: 7,
+		slug: "hoody",
+		name: "Dime Hoody - Navy",
+		price: "¥5000",
+		size: "Large",
+		imageUrl: "../../images/dime-hoody.jpg",
+		description:
+			"Two years old hoody. No visible stains or wear. It's a large but fits closer to a medium. Perfect for chilly sessions.",
+		category: "Hoodies",
+		condition: "Used (Good)",
+		seller: {
+			name: "Sk8Rat187",
+			profileUrl: "#",
+			rating: 4.5,
+		},
 	},
 	// -----------------------------------------
 ];

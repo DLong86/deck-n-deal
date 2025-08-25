@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ShopPage() {
 	const [selectedCategory, setSelectedCategory] = useState("All");
-	const [sortOption, setSortOption] = useState("");
+	// const [sortOption, setSortOption] = useState("");
 
 	const categories = [
 		"All",
@@ -13,6 +13,7 @@ export default function ShopPage() {
 		"Trucks",
 		"Wheels",
 		"Bearings",
+		"Shoes",
 		"Tees",
 		"Shirts",
 		"Hoodies",
@@ -22,7 +23,6 @@ export default function ShopPage() {
 		"Shorts",
 		"Headwear",
 		"Socks",
-		"Decks",
 		"Accessories",
 	];
 
@@ -40,6 +40,7 @@ export default function ShopPage() {
 					{categories.map((cat) => (
 						<button
 							key={cat}
+							onClick={() => setSelectedCategory(cat)}
 							className={`px-3 py-1 text-xs border transition-all duration-150 cursor-pointer uppercase ${
 								selectedCategory === cat
 									? "bg-white text-black border-white"
@@ -53,7 +54,7 @@ export default function ShopPage() {
 			</div>
 
 			<section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
-				{products.map((product) => (
+				{filteredItems.map((product) => (
 					<Link key={product.id} href={`/shop/${product.slug}`}>
 						<div className="group cursor-pointer">
 							<div className="aspect-square overflow-hidden">

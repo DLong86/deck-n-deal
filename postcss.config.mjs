@@ -4,9 +4,9 @@ const config = {
 	},
 	theme: {
 		extend: {
-			fontFamily: {
-				sans: ["var(--font-inter)", ...fontFamily.sans],
-			},
+			// fontFamily: {
+			// 	sans: ["var(--font-inter)", ...fontFamily.sans],
+			// },
 		},
 	},
 };

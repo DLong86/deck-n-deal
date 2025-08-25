@@ -69,6 +69,7 @@ const Navbar = () => {
 
 			{/* Right: Icons */}
 			<div className="flex items-center gap-4">
+				{/* need to add login icon!!!!!!!!!!!! */}
 				<ShoppingCart className="w-6 h-6 cursor-pointer hover:text-neutral-300 duration-150" />
 				<Search className="w-6 h-6 cursor-pointer hover:text-neutral-300" />
 			</div>
