@@ -117,5 +117,55 @@ export const products = [
 			rating: 4.5,
 		},
 	},
+	{
+		id: 8,
+		slug: "trucks-2",
+		name: "Ace trucks",
+		price: "¥5900",
+		size: "size 11",
+		imageUrl: "../../images/ace-hero.jpg",
+		description:
+			"Brand new - haven't been used. Were bought as a present but too small for my board.",
+		category: "Trucks",
+		condition: "Unused",
+		seller: {
+			name: "spotty_Simon_94",
+			profileUrl: "#",
+			rating: 4,
+		},
+	},
+	{
+		id: 9,
+		slug: "hoody-2",
+		name: "Palace Hoody (Rare*)",
+		price: "¥12000",
+		size: "Medium",
+		imageUrl: "../../images/pal-item.jpg",
+		description:
+			"Palace skateboards 2017 Autumn/winter drop. No visible signs of wear or damage. Will sell quickly, so cop soon!",
+		category: "Hoodies",
+		condition: "Used (Good)",
+		seller: {
+			name: "debbie-191",
+			profileUrl: "#",
+			rating: 4.5,
+		},
+	},
+	{
+		id: 10,
+		slug: "bearings",
+		name: "Bones Reds + Bones Swiss (pair)",
+		price: "¥6000",
+		size: "N/A",
+		imageUrl: "../../images/bearings.jpg",
+		description: "New Bones Reds and used Swizz bearings found in my cupboard.",
+		category: "Bearings",
+		condition: "Used (Good)",
+		seller: {
+			name: "spotty_Simon_94",
+			profileUrl: "#",
+			rating: 4,
+		},
+	},
 	// -----------------------------------------
 ];

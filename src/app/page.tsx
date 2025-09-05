@@ -2,7 +2,7 @@ import HomeHero from "./components/HomeHero";
 
 export default function Home() {
 	return (
-		<main className="bg-black text-white min-h-screen px-6 sm:px-14">
+		<main className="bg-black text-white min-h-screen px-6 sm:px-14 pt-20">
 			<section className="">
 				<HomeHero />
 				{/* <h1 className="text-4xl sm:text-6xl font-bold mb-6">
