@@ -66,7 +66,7 @@ export default function ShopPage() {
 							</div>
 							<div className="mt-4 text-sm tracking-wide uppercase text-gray-200">
 								<p>{product.name}</p>
-								<p className="text-gray-400 mt-1">{product.price}</p>
+								<p className="text-gray-400 mt-1">¥{product.price}</p>
 							</div>
 						</div>
 					</Link>

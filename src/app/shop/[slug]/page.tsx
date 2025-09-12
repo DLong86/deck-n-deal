@@ -3,9 +3,11 @@ import { useParams } from "next/navigation";
 import { products } from "@/data/products";
 import Link from "next/link";
 import StarRating from "@/app/components/StarRating";
+import { useCart } from "@/context/CartContext";
 
 export default function ProductPage() {
 	const { slug } = useParams();
+	const { addToCart } = useCart();
 	const product = products.find((p) => p.slug === slug);
 
 	if (!product)
@@ -28,7 +30,7 @@ export default function ProductPage() {
 				<h1 className="text-2xl font-semibold">{product.name}</h1>
 
 				{/* Price */}
-				<p className="text-xl font-extralight">{product.price}</p>
+				<p className="text-xl font-extralight">¥{product.price}</p>
 
 				{/* Condition */}
 				{product.condition && (
@@ -45,7 +47,10 @@ export default function ProductPage() {
 				</div>
 
 				{/* Add to cart */}
-				<button className="w-full bg-black text-white py-3 hover:bg-gray-500 transition-all duration-200 cursor-pointer mb-8">
+				<button
+					className="w-full bg-black text-white py-3 hover:bg-gray-500 transition-all duration-200 cursor-pointer mb-8"
+					onClick={() => addToCart({ ...product, price: product.price })}
+				>
 					Add to Cart
 				</button>
 

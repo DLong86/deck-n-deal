@@ -58,7 +58,9 @@ const Navbar = () => {
 				<Link href="/login">
 					<User className="w-6 h-6 cursor-pointer hover:text-neutral-300 duration-150" />
 				</Link>
-				<ShoppingCart className="w-6 h-6 cursor-pointer hover:text-neutral-300 duration-150" />
+				<Link href="/cart">
+					<ShoppingCart className="w-6 h-6 cursor-pointer hover:text-neutral-300 duration-150" />
+				</Link>
 				<Search className="w-6 h-6 cursor-pointer hover:text-neutral-300" />
 				{/* Mobile menu button */}
 				<button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>

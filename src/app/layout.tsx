@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter, Bebas_Neue } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const bebas = Bebas_Neue({
@@ -10,11 +11,6 @@ const bebas = Bebas_Neue({
 	variable: "--font-bebas",
 	weight: "400",
 });
-// const unica = Unica_One({
-// 	weight: "400",
-// 	subsets: ["latin"],
-// 	display: "swap",
-// });
 
 export const metadata: Metadata = {
 	title: "Deck 'n' Deal",
@@ -29,9 +25,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.variable}>
-				<Navbar />
-				{children}
-				<Footer />
+				<CartProvider>
+					<Navbar />
+					{children}
+					<Footer />
+				</CartProvider>
 			</body>
 		</html>
 	);
