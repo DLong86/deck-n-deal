@@ -21,7 +21,7 @@ export default function CartPage() {
 	if (cart.length === 0) {
 		return (
 			<div
-				className={`pt-40 w-[80%] mx-auto flex  items-center justify-between `}
+				className={`pt-40 w-[80%] mx-auto flex flex-col gap-12 min-h-screen`}
 			>
 				<div className="">
 					<h1
@@ -33,7 +33,7 @@ export default function CartPage() {
 				</div>
 				<Link
 					href="/shop"
-					className={`border-b border-gray-200 py-4 text-sm uppercase cursor-pointer hover:bg-gray-100 hover:p-4  transition-all duration-400 ${montserratLight.className}`}
+					className={`border-b border-gray-200 py-4 text-sm uppercase cursor-pointer hover:bg-gray-100 hover:p-4 transition-all duration-400 ${montserratLight.className}`}
 				>
 					Continue shopping
 				</Link>
@@ -45,7 +45,20 @@ export default function CartPage() {
 		<div className="max-w-7xl mx-auto py-30 lg:py-40 px-6 grid grid-cols-1 lg:grid-cols-3 gap-0 sm:gap-12 min-h-screen">
 			{/* Left: cart items */}
 			<div className="lg:col-span-2">
-				<h1 className={`text-4xl mb-8 ${montserratBold.className}`}>Cart</h1>
+				{/* Cart header row */}
+				<div className="flex justify-between items-center pb-4 mt-6 sm:mt-0">
+					<h1 className={`text-4xl ${montserratBold.className}`}>
+						Cart{" "}
+						<span className="text-sm font-normal">({cart.length} items)</span>
+					</h1>
+
+					<Link
+						href="/shop"
+						className={`text-xs uppercase tracking-wider ${montserratLight.className} hover:underline hover:text-gray-600 transition-all duration-300`}
+					>
+						Continue Shopping
+					</Link>
+				</div>
 				<div className="space-y-8 border-t border-gray-300">
 					{cart.map((item) => (
 						<div
@@ -105,7 +118,7 @@ export default function CartPage() {
 				</div>
 
 				{/* Buttons */}
-				<button className="w-full py-3 bg-black text-white font-semibold hover:bg-gray-800 cursor-pointer">
+				<button className="w-full py-3 bg-black text-white font-semibold hover:bg-[#222] cursor-pointer">
 					CHECKOUT
 				</button>
 			</div>

@@ -47,12 +47,14 @@ export default function ProductPage() {
 				</div>
 
 				{/* Add to cart */}
-				<button
-					className="w-full bg-black text-white py-3 hover:bg-gray-500 transition-all duration-200 cursor-pointer mb-8"
-					onClick={() => addToCart({ ...product, price: product.price })}
-				>
-					Add to Cart
-				</button>
+				<Link href="/cart">
+					<button
+						className="w-full bg-black text-white py-3 hover:bg-gray-500 transition-all duration-200 cursor-pointer mb-8"
+						onClick={() => addToCart({ ...product, price: product.price })}
+					>
+						Add to Cart
+					</button>
+				</Link>
 
 				{/* Description */}
 				<div className="">
